@@ -603,6 +603,10 @@ pub fn spawn_level(
                             storage,
                             texture: texture.clone(),
                             tile_size: tilemap_tile_size,
+                            render_settings: bevy_ecs_tilemap::prelude::TilemapRenderSettings{
+                                y_sort: true,
+                                render_chunk_size: UVec2::new(64, 1),
+                            },
                             ..default()
                         }
                     } else {
@@ -649,6 +653,10 @@ pub fn spawn_level(
                             storage,
                             texture: texture.clone(),
                             tile_size: tilemap_tile_size,
+                            render_settings: bevy_ecs_tilemap::prelude::TilemapRenderSettings{
+                                y_sort: true,
+                                render_chunk_size: UVec2::new(64, 1),
+                            },
                             ..default()
                         }
                     };
